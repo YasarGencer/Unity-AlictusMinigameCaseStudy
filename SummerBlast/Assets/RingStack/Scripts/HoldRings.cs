@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HoldRings : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class HoldRings : MonoBehaviour
                     completed = true;
                     item.GetComponentInChildren<Animator>().SetTrigger("Dance");
                     item.transform.position = new Vector3(item.transform.position.x, item.transform.position.y + 2.3f, item.transform.position.z);
+                    Invoke("Restart", 2f);
                 }
     }
     #region Update
@@ -106,4 +108,6 @@ public class HoldRings : MonoBehaviour
         return null;
     }
     public static void SetCompleteCount() { completeCount++; }
+    private void Restart() { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); }
+
 }

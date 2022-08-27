@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EncounterManager : MonoBehaviour
 {
@@ -34,6 +33,8 @@ public class EncounterManager : MonoBehaviour
             foreach (var item in encounters)
                 item.GetComponent<EncounterAproaching>().SetSpeed(item.GetComponent<EncounterAproaching>().GetSpeedValue());
         }
+        if (GetEncounterDone())
+            Invoke("Restart",1f);
     }
 
     public void SetEncounterDone()
@@ -47,4 +48,14 @@ public class EncounterManager : MonoBehaviour
             }
         }
     }
+    public bool GetEncounterDone()
+    {
+        for (int i = 0; i < encounters.Length; i++)
+        {
+            if (encounters[i].GetComponent<EncounterAproaching>().GetDone() == false)
+                return false;
+        }
+        return true;
+    }
+    private void Restart() { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); }
 }
