@@ -34,7 +34,7 @@ public class HoldRings : MonoBehaviour
                 }
     }
     #region Update
-    public void GetRing()
+    void GetRing()
     {
         GameObject body = Cast();
         if (body)
@@ -47,12 +47,12 @@ public class HoldRings : MonoBehaviour
             }
         }
     }
-    public void MoveRing()
+    void MoveRing()
     {
         Vector3 mouseToWorld = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 21.17f));
         holdingRing.transform.position = new Vector3(mouseToWorld.x, 10f, holdingRing.transform.position.z);
     }
-    public void GhostRings()
+    void GhostRings()
     {
         GameObject body = null;
         body = Cast();
@@ -69,7 +69,7 @@ public class HoldRings : MonoBehaviour
         }
         else if (current != null) { foreach (var item in bodies) item.GetComponent<Rings>().PopGhosts(); current = null; }
     }
-    public void DropRing()
+    void DropRing()
     {
         if (current != null)
         {
@@ -85,7 +85,7 @@ public class HoldRings : MonoBehaviour
             first.Push(holdingRing);
         SetHolding(false);
     }
-    public void ResetAll()
+    void ResetAll()
     {
         foreach (var item in bodies) item.GetComponent<Rings>().PopGhosts();
         if (current) current.CheckMeshes();
