@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 442}
   m_MaxSize: {x: 22006, y: 14042}
   vertical: 0
-  controlID: 5842
+  controlID: 121
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 5927
+  controlID: 18
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 434, y: 392}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 1
-  controlID: 5848
+  controlID: 151
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 434, y: 271}
   m_MaxSize: {x: 14004, y: 10021}
   vertical: 0
-  controlID: 5849
+  controlID: 152
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -323,8 +323,8 @@ MonoBehaviour:
     y: 523
     width: 800
     height: 424
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 20}
@@ -655,21 +655,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 46c6feff843cffffe8a1ffffeca1fffff0a1fffff2a2ffff28a3ffff6aa3ffff84b2ffffe6b2ffff54b7ffff54bcffffe4bcffff24c4ffff1ac9ffff1ec9ffff22c9ffff4ec9ffff52c9ffffe8ebffff60f4ffffdcf5fffff8f7ffffd2f8ffff06f9ffff0af9ffff0ef9ffff12f9ffff1ef9ffff6af9ffff6ef9ffff72f9ffff76f9ffff7af9ffff82f9ffff86f9ffff8af9ffff96f9ffff9af9ffffaaf9ffffaef9ffffbaf9ffffecf9ffff26faffff64faffff50fbffff
+      m_ExpandedIDs: a0ebffff7aecffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Encounter 2
-        m_OriginalName: Encounter 2
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -80314
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 11}
       m_SearchString: 
@@ -717,22 +717,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/LaserDodge_VisualPackage/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/LaserDodge_VisualPackage/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\GitHub\Repo\alictusMinigames\RobMaster
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fc540100
-    m_LastClickedID: 87292
-    m_ExpandedIDs: 00000000e43d0000e63d000000ca9a3b
+    m_SelectedIDs: e04e0000
+    m_LastClickedID: 20192
+    m_ExpandedIDs: 00000000d44e0000de4e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -760,7 +760,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e43d000000ca9a3b
+    m_ExpandedIDs: 00000000d44e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
