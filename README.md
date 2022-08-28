@@ -2,7 +2,7 @@
 In this study i have been asked to clone 6 minigames of the games published by Alictus
 
 ### GAME 1 : SUMMER BUSTER / RING STACK MINIGAME
-[![Game1](https://play-lh.googleusercontent.com/AR8LFe7IAzVP-YXXEIaU8d4EjhbYOL3dk7_d_0YQhvQOww14PlDm3bxUsMBDiMk1Odc=w240-h480-rwg "Game1")](https://play.google.com/store/apps/details?id=com.cg.waterbuster&gl=TR "Game1")
+[![Game1](https://play-lh.googleusercontent.com/AR8LFe7IAzVP-YXXEIaU8d4EjhbYOL3dk7_d_0YQhvQOww14PlDm3bxUsMBDiMk1Odc=w240-h480 "Game1")](https://play.google.com/store/apps/details?id=com.cg.waterbuster&gl=TR "Game1")
 ### GAME 2 : AFFEARS 3D : SILLY SECRETS / MIRROR SELFIE MINIGAME
 [![Game2](https://play-lh.googleusercontent.com/5NzDWrIb0CP9udtEUDCNvxJ-X484Q8EslT8YA0ugyBIwm1pPTKorAD0_34JmTwdIXtw=w240-h480-rw "Game2")](https://play.google.com/store/apps/details?id=com.sk.babymatch&gl=TR "Game2")
 ### GAME 3 : ROB MASTER 3D / LASER DODGE MINIGAME
