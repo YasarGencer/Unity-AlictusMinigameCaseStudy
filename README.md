@@ -3,7 +3,7 @@ In this study i have been asked to clone 6 minigames of the games published by A
 
 ### Summary
 
-This was a pretty helpfull study for me. I have learned the basics of masking in 3d. I used masking on 2d and ui before but this was my first time using in 3d. It was a great way to test myself to see what i am capable of as well. This really helped me to realize my knowledge and lack of knowledge quite quickly.
+This was a pretty helpfull study for me. I have learned the basics of masking in 3d. I used masking on 2d and ui before but this was my first time using it in 3d. It was a great way to test myself to see what i am capable of as well. This really helped me to realize my knowledge and lack of knowledge quite quickly.
 
 ### GAME 1 : SUMMER BUSTER / RING STACK MINIGAME
 [![Game1](https://play-lh.googleusercontent.com/AR8LFe7IAzVP-YXXEIaU8d4EjhbYOL3dk7_d_0YQhvQOww14PlDm3bxUsMBDiMk1Odc=w240-h480 "Game1")](https://play.google.com/store/apps/details?id=com.cg.waterbuster&gl=TR "Game1")
