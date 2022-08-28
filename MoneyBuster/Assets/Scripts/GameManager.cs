@@ -4,6 +4,8 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    [HideInInspector]
+    public GameManager gameManager;
     [SerializeField]
     private GameObject[] moneyPrefab;
     [SerializeField]
@@ -12,12 +14,23 @@ public class GameManager : MonoBehaviour
     private Transform shred, collect;
     [SerializeField]
     TextMeshProUGUI text;
+
+    GameObject[] uvMask, glassMask, moneyMask;
+
     private Transform selected;
     private Vector3 startPos;
     private bool holding;
     private void Awake()
     {
-        Instantiate(moneyPrefab[Random.Range(0, moneyPrefab.Length)], new Vector3(-1.55f, -1.27f, -1.376251f), Quaternion.identity);
+        Instantiate(moneyPrefab[Random.Range(0, moneyPrefab.Length)], new Vector3(-0.42f, -0.29f, -1.376251f), Quaternion.identity);
+        if (gameManager == null) gameManager = this;
+
+        moneyMask = GameObject.FindGameObjectsWithTag("MaskForMoney");
+        uvMask = GameObject.FindGameObjectsWithTag("MaskForUV");
+        glassMask = GameObject.FindGameObjectsWithTag("MaskForGlass");
+
+        foreach (var item in moneyMask)
+            item.GetComponent<MeshRenderer>().material.renderQueue = 3002;
     }
     void Update()
     {
@@ -34,6 +47,10 @@ public class GameManager : MonoBehaviour
             startPos = selected.transform.position;
             selected.GetComponent<Rotate>().holding = true;
             holding = true;
+            if (selected.CompareTag("UV"))
+                MaskFor(glassMask, uvMask);
+            else if (selected.CompareTag("Glass"))
+                MaskFor(uvMask, glassMask);
         }
     }
     public void MoveTarget()
@@ -54,6 +71,7 @@ public class GameManager : MonoBehaviour
             selected.transform.position = startPos;
             selected.GetComponent<Rotate>().holding = false;
             selected = null;
+            UnMask();
         }
     }
     private GameObject Cast()
@@ -87,5 +105,18 @@ public class GameManager : MonoBehaviour
         Invoke("Restart", 1.5f);
     }
     private void Restart() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+    private void MaskFor(GameObject[] mask, GameObject[] unmask)
+    {
+        foreach (var item in unmask)
+            item.GetComponent<MeshRenderer>().material.renderQueue = 3000;
+        foreach (var item in mask)
+            item.GetComponent<MeshRenderer>().material.renderQueue = 3002;
+    }
+    private void UnMask()
+    {
+        foreach (var item in glassMask)
+            item.GetComponent<MeshRenderer>().material.renderQueue = 3000;
+        foreach (var item in uvMask)
+            item.GetComponent<MeshRenderer>().material.renderQueue = 3000;
+    }
 }

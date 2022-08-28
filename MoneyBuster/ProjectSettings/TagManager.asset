@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Mask
   - Money
+  - UV
+  - Glass
+  - MaskForMoney
+  - MaskForUV
+  - MaskForGlass
   layers:
   - Default
   - TransparentFX
