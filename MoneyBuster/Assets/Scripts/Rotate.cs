@@ -1,12 +1,10 @@
 using UnityEngine;
-
 public class Rotate : MonoBehaviour
 {
+    //to make objects set in same place after being dropped
     [SerializeField]
     Vector3 rotationH, rotationNH;
-
     public bool holding { get; set; } = false;
-
     void Update()
     {
         if(holding)

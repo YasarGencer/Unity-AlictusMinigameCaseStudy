@@ -1,24 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Rings : MonoBehaviour
 {
-    //public List<GameObject> ringList;
-    [SerializeField]
-    private GameObject[] startRingArray;
     [SerializeField]
     private GameObject[] ringArray;
     [SerializeField]
-    private int index = -1;
+    private int index = 1; // there is currently two rings in every holder so indexs is not -1 at the start
     private bool interactable = true;
-    private void Start()
-    {
-        //pushes starting rings to array
-        ringArray = new GameObject[3];
-        foreach (var item in startRingArray)
-            Push(item);
-    }
     public bool Push(GameObject gameObject)
     {
         if (index == ringArray.Length - 1)
@@ -55,7 +43,6 @@ public class Rings : MonoBehaviour
     }
     public bool isFull()
     {
-        
         foreach (var item in ringArray)
             //makes it doesn't count ghosts as a ring
             if (item && item.name == "Ghost")
@@ -64,15 +51,6 @@ public class Rings : MonoBehaviour
             return true;
         else
             return false;
-    }
-    IEnumerator Interact()
-    {
-        if (GetInteractable())
-        {
-            SetInteractable(false);
-            yield return new WaitForSeconds(.2f);
-            SetInteractable(true);
-        }
     }
     public bool GetInteractable() { return interactable; }
     public void SetInteractable(bool value) { interactable = value; }

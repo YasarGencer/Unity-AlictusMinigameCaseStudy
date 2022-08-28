@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -16,19 +15,18 @@ public class GameManager : MonoBehaviour
     MoveMask mask;
     [SerializeField]
     TextMeshProUGUI text;
-
     private void Start()
     {
         if (gameManager == null) gameManager = this;
-        layers[currentLayer].GetComponent<MeshRenderer>().material.renderQueue = 3002;
+            layers[currentLayer].GetComponent<MeshRenderer>().material.renderQueue = 3002;
     }
-
     public void NextLayer()
     {
         if (currentLayer + 1 == layers.Length)
             StartCoroutine(Complete());
         else
         {
+            //makes layers gets mask turn by turn
             layers[currentLayer].SetActive(false);
             layers[currentLayer + 1].GetComponent<MeshRenderer>().material.renderQueue = 3002;
             currentLayer += 1;

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,7 +22,7 @@ public class HoldRings : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !holding) GetRing();
         if (Input.GetMouseButton(0) && holding) { MoveRing(); GhostRings(); }
         else if (Input.GetMouseButtonUp(0)) { DropRing(); ResetAll(); }
-
+        //check if completed
         if (completeCount == bodies.Length - 1 && !completed)
             foreach (var item in bodies)
                 if (item.GetComponent<Rings>().GetInteractable())
@@ -33,6 +31,8 @@ public class HoldRings : MonoBehaviour
                     item.GetComponentInChildren<Animator>().SetTrigger("Dance");
                     item.transform.position = new Vector3(item.transform.position.x, item.transform.position.y + 2.3f, item.transform.position.z);
                     Invoke("Restart", 2f);
+                    //Needs to be reseted even before restarting the scene because its static
+                    completeCount = 0;
                 }
     }
     #region Update
@@ -56,6 +56,7 @@ public class HoldRings : MonoBehaviour
     }
     void GhostRings()
     {
+        //makse sure even ghost rings does enter the arrays it doesnt counts them as rings and sets the arrays full by making them pop immidietly when cursor leaves
         GameObject body = null;
         body = Cast();
         if (body)

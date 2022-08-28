@@ -14,21 +14,18 @@ public class GameManager : MonoBehaviour
     private Transform shred, collect;
     [SerializeField]
     TextMeshProUGUI text;
-
     GameObject[] uvMask, glassMask, moneyMask;
-
     private Transform selected;
     private Vector3 startPos;
     private bool holding;
     private void Awake()
     {
         Instantiate(moneyPrefab[Random.Range(0, moneyPrefab.Length)], new Vector3(-0.42f, -0.29f, -1.376251f), Quaternion.identity);
-        if (gameManager == null) gameManager = this;
-
+        if (gameManager == null) 
+            gameManager = this;
         moneyMask = GameObject.FindGameObjectsWithTag("MaskForMoney");
         uvMask = GameObject.FindGameObjectsWithTag("MaskForUV");
         glassMask = GameObject.FindGameObjectsWithTag("MaskForGlass");
-
         foreach (var item in moneyMask)
             item.GetComponent<MeshRenderer>().material.renderQueue = 3002;
     }
@@ -47,6 +44,7 @@ public class GameManager : MonoBehaviour
             startPos = selected.transform.position;
             selected.GetComponent<Rotate>().holding = true;
             holding = true;
+            //makes childs of money gets mask differently by picked tool
             if (selected.CompareTag("UV"))
                 MaskFor(glassMask, uvMask);
             else if (selected.CompareTag("Glass"))

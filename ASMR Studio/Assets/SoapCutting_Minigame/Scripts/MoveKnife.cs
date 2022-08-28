@@ -1,13 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveKnife : MonoBehaviour
 {
     Vector3 startPos, currPos;
-
     [SerializeField] float speed;
-
     float[] layerHeights = new float[3];
     private void Start()
     {
@@ -22,11 +18,8 @@ public class MoveKnife : MonoBehaviour
         else if (Input.GetMouseButton(0))
         {
             currPos = Input.mousePosition;
-
             float dist = currPos.x - startPos.x;
-
             transform.Translate(dist * Time.deltaTime * speed, 0, 0);
-
             startPos = Input.mousePosition;
         }
         if(Input.GetMouseButtonUp(0))
@@ -39,10 +32,7 @@ public class MoveKnife : MonoBehaviour
             GameManager.gameManager.NextLayer();
             transform.localPosition = new Vector3(0.12f, layerHeights[GameManager.gameManager.currentLayer], transform.localPosition.z);
         }
-        if (transform.localPosition.x >= -0)
-        {
+        else if (transform.localPosition.x > 0)
             transform.localPosition = new Vector3(0, transform.localPosition.y, transform.localPosition.z);
-        }
-
     }
 }

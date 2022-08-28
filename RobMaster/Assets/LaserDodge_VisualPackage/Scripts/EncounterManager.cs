@@ -7,7 +7,7 @@ public class EncounterManager : MonoBehaviour
     [SerializeField]
     Transform[] encounters;
     public static bool inEncounter = false;
-
+    bool restarting = false;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -33,8 +33,11 @@ public class EncounterManager : MonoBehaviour
             foreach (var item in encounters)
                 item.GetComponent<EncounterAproaching>().SetSpeed(item.GetComponent<EncounterAproaching>().GetSpeedValue());
         }
-        if (GetEncounterDone())
-            Invoke("Restart",1f);
+        if (GetEncounterDone() && !restarting)
+        {
+            restarting = true;
+            Invoke("Restart", 1f);
+        }
     }
 
     public void SetEncounterDone()
