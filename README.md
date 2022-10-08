@@ -16,7 +16,7 @@ This was the first minigame i started cloning. I use stack data structure to mak
 <h1 align="center">GAME 2 : AFFEARS 3D : SILLY SECRETS / MIRROR SELFIE MINIGAME</h1>
 
 <p align="center">
-   <img src=" " alt="[AFFEARS 3D : SILLY SECRETS]"/>
+   <img src="https://play-lh.googleusercontent.com/5NzDWrIb0CP9udtEUDCNvxJ-X484Q8EslT8YA0ugyBIwm1pPTKorAD0_34JmTwdIXtw=w240-h480-rw " alt="[AFFEARS 3D : SILLY SECRETS]"/>
 </p>
 
 This was my last minigame because i was intimidated by the fact that game could have include mirrors. But it didn't. So i made a starting chat animation and after that gameplay objects gets set actived. I made an arrow spawner to make rhythm randomized. After 4 correct swipes game gets completed and restarts. 
