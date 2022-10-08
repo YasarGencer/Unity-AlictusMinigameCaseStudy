@@ -27,7 +27,6 @@ This was my last minigame because i was intimidated by the fact that game could 
    <img src="https://play-lh.googleusercontent.com/01s-9ocxbPi60tys9QU0LSGXytfhq0GcyGlOyT0-q9QH-nUXhzKBTWAHV7909WJOOss7=w240-h480-rw" alt="[ROB MASTER 3D]"/>
 </p>
 
- 
 This was the second project and it was pretty straight forward i just stopped the movement of player when the encounter is close enough and give tools to make body fit in the gap. After all 4 body parts were safe game continued automatically.
 
 <h1 align="center"> GAME 4 : DEEP CLEAN INC. 3D / CHEESE PUFF CLEANING MINIGAME </h1>
